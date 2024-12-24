@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hijab RAI</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Times New Roman, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('foto.jpeg'); /* Your background image */
+            background-size: cover;
+            background-position: center;
+            padding: 80px 50px;
+            text-align: center;
+            color: white;
+            position: relative; /* Needed for positioning the promo overlay */
+        }
+
+        .hero-promo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+            color: #f7d4d4;
+            padding: 20px;
+            font-size: 1.5em;
+            text-align: center;
+            font-weight: bold;
+            z-index: 2; /* Ensures it stays on top of the background image */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3; /* Keeps the text above the promo overlay */
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .hero .btn {
+            padding: 10px 20px;
+            background-color: #fd7dec;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .bio {
+            text-align: left;
+        }
+
+        /* Products Section */
+        #products {
+            padding: 50px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .product-card .btn-cart, .product-card .btn-order {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #bd53ab;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Why Us Section */
+        #why-us {
+            background-color: #ecf0f1;
+            padding: 50px;
+        }
+
+        .reasons {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .reason-card {
+            text-align: center;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form .btn {
+            padding: 10px 20px;
+            background-color: #f0a9e0;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Responsiveness */
+        @media screen and (max-width: 768px) {
+            .hero {
+                padding: 50px 20px;
+            }
+
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .reasons {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-promo">
+            <p class="promo-text">Big Sale! 20% Off on All Products This Week!</p>
+        </div>
+        <nav class="menu-toggle">
+            <button>☰</button>
+        </nav>
+        <div class="hero-content">
+            <h1>HIJAB RAI ONLINE STORE</h1>
+            <p>Find the best products at unbeatable prices!</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-container">
+            <img src="pp.JPG" alt="Profile" class="profile-img">
+            <div class="bio">
+                <h3>Resti Aprillia Isma</h3>
+                <p>NIM: 222303025</p>
+                <p>Address: JL. Braga Bandung</p>
+                <p>Welcome to our online store! We offer the best products in various categories.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+<section id="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="1.jpg" alt="Product 1">
+            <h4>Product 1</h4>
+            <p>45k</p>
+            <button class="btn-cart">Add to Cart</button>
+            <button class="btn-order">Order Now</button>
+        </div>
+        <div class="product-card">
+            <img src="2.jpeg" alt="Product 2">
+            <h4>Product 2</h4>
+            <p>50k</p>
+            <button class="btn-cart">Add to Cart</button>
+            <button class="btn-order">Order Now</button>
+        </div>
+        <div class="product-card">
+            <img src="3.webp" alt="Product 3">
+            <h4>Product 3</h4>
+            <p>50k</p>
+            <button class="btn-cart">Add to Cart</button>
+            <button class="btn-order">Order Now</button>
+        </div>
+        <div class="product-card">
+            <img src="4.jpg" alt="Product 4">
+            <h4>Product 4</h4>
+            <p>$15</p>
+            <button class="btn-cart">Add to Cart</button>
+            <button class="btn-order">Order Now</button>
+        </div>
+        <div class="product-card">
+            <img src="5.webp" alt="Product 5">
+            <h4>Product 5</h4>
+            <p>50k</p>
+            <button class="btn-cart">Add to Cart</button>
+            <button class="btn-order">Order Now</button>
+        </div>
+        <div class="product-card">
+            <img src="6.webp" alt="Product 6">
+            <h4>Product 6</h4>
+            <p>50k</p>
+            <button class="btn-cart">Add to Cart</button>
+            <button class="btn-order">Order Now</button>
+        </div>
+        <div class="product-card">
+            <img src="7.png" alt="Product 7">
+            <h4>Product 7</h4>
+            <p>50k</p>
+            <button class="btn-cart">Add to Cart</button>
+            <button class="btn-order">Order Now</button>
+        </div>
+        <div class="product-card">
+            <img src="8.jpg" alt="Product 8">
+            <h4>Product 8</h4>
+            <p>50k</p>
+            <button class="btn-cart">Add to Cart</button>
+            <button class="btn-order">Order Now</button>
+        </div>
+        <div class="product-card">
+            <img src="9.jpg" alt="Product 9">
+            <h4>Product 9</h4>
+            <p>50k</p>
+            <button class="btn-cart">Add to Cart</button>
+            <button class="btn-order">Order Now</button>
+        </div>
+        <div class="product-card">
+            <img src="10.jpg" alt="Product 10">
+            <h4>Product 10</h4>
+            <p>50k</p>
+            <button class="btn-cart">Add to Cart</button>
+            <button class="btn-order">Order Now</button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Why Us Section -->
+    <section id="why-us">
+        <h2>Why Choose Us?</h2>
+        <div class="reasons">
+            <div class="reason-card">
+                <h4>Fast Delivery</h4>
+                <p>We deliver your order in the shortest time possible.</p>
+            </div>
+            <div class="reason-card">
+                <h4>Best Quality</h4>
+                <p>We offer the highest quality products.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="send-email.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p>Or reach us on <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a></p>
+    </section>
+
+</body>
+</html>
